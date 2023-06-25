@@ -9,4 +9,5 @@ Written by Vennor
 > Used to modify player inventory and stats, and check GVARs and MVARs.  
 Known bugs:  
 > Traits can't be changed  
-> Skills can't be decreased
+> Skills can't be decreased  
+![gl_visual_vars buttons](docs/ScreenShot%20-%20gl_visual_vars%20buttons.png"?raw=true "ScreenShot - gl_visual_vars buttons")
