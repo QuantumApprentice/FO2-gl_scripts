@@ -10,5 +10,8 @@ Written by Vennor
 Known bugs:  
 > Traits can't be changed  
 > Skills can't be decreased  
-![gl_visual_vars buttons](docs/ScreenShot%20-%20gl_visual_vars%20buttons.png?raw=true "ScreenShot - gl_visual_vars buttons")
-![gl_visual_vars pg1](docs/ScreenShot%20-%20gl_visual_vars%20pg1-SPECIAL%20&%20Skills.png?raw=true "ScreenShot - gl_visual_vars pg1")
+<img src="docs/ScreenShot%20-%20gl_visual_vars%20buttons.png" alt="Buttons menu" width="50%"/>
+<img src="docs/ScreenShot%20-%20gl_visual_vars%20pg1-SPECIAL%20&%20Skills.png" alt="SPECIAL & Skills menu" width="50%"/>
+<img src="docs/ScreenShot%20-%20gl_visual_vars%20pg2-Traits%20&%20Perks.png" alt="Traits & Perks menu" width="50%" />
+<img src="docs/ScreenShot%20-%20gl_visual_vars%20pg3-Items.png" alt="Items menu" width="50%" />
+<img src="docs/ScreenShot%20-%20gl_visual_vars%20pg4-Variables.png" alt="GVARs & MVARs menu" width="50%" />
