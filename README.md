@@ -51,5 +51,3 @@ Works exactly the same as message_str, except you get messages from files in tex
     If a file has a specific number assigned in ExtraGameMsgFileList, its fileId will be (0x2000 + assigned number). (e.g. with ExtraGameMsgFileList=foo,bar:2,foobar in ddraw.ini, bar.msg will be associated with 0x2002 and foobar.msg with 0x2003.) -->
 
 
-
-
