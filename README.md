@@ -15,7 +15,7 @@ Known bugs:
 
 This script requires a define in ddraw.ini for files representing
 gvar.msg and mvar.msg, both of which will need to be created in
-> FO2/data/text/english/game/
+> FO2/data/text/english/game/<br>
 (possibly substitute your language if sfall supports it)
 
 Add this line to ddraw.ini (not sure what version):
