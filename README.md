@@ -12,3 +12,44 @@ Written by Vennor
 Known bugs:  
 > Traits can't be changed  
 > Skills can't be decreased
+
+This script requires a define in ddraw.ini for files representing
+gvar.msg and mvar.msg, both of which will need to be created in
+-- FO2/data/text/english/game/
+-- (possibly substitute your language if sfall supports it)
+
+Add this line to ddraw.ini (not sure what version):
+> ExtraGameMsgFileList=gvar,mvar
+
+and create gvar.msg with this format:
+{0}{}{GVAR_PLAYER_REPUTATION}
+{1}{}{GVAR_CHILDKILLER_REPUTATION}
+{2}{}{GVAR_CHAMPION_REPUTATION}
+{3}{}{GVAR_BERSERKER_REPUTATION}
+{4}{}{GVAR_BAD_MONSTER}
+{5}{}{GVAR_GOOD_MONSTER}
+{6}{}{GVAR_PLAYER_MARRIED}
+
+and mvar.msg with this format:
+# [4] [Arroyo Village] [arvillag.h]
+{4000}{}{MVAR_Rope_Status}
+{4001}{}{MVAR_Tree_Hex}
+{4002}{}{MVAR_Gecko_Attack}
+{4003}{}{MVAR_Discovery}
+
+This is because this script uses sfall's message_str_game() function
+link here: https://sfall.bgforge.net/other/#message_str_game
+but in case that doesn't work, here's the text:
+
+<!-- message_str_game
+
+string message_str_game(int fileId, int messageId)
+
+Works exactly the same as message_str, except you get messages from files in text/english/game folder. Use GAME_MSG_* defines or mstr_* macros from sfall.h to use specific msg file
+
+    Additional game msg files added by ExtraGameMsgFileList setting will have consecutive fileIds assigned beginning from 0x2000 to 0x2FFF. (e.g. if you set ExtraGameMsgFileList=foo,bar in ddraw.ini, foo.msg will be associated with 0x2000 and bar.msg with 0x2001.).
+    If a file has a specific number assigned in ExtraGameMsgFileList, its fileId will be (0x2000 + assigned number). (e.g. with ExtraGameMsgFileList=foo,bar:2,foobar in ddraw.ini, bar.msg will be associated with 0x2002 and foobar.msg with 0x2003.) -->
+
+
+
+

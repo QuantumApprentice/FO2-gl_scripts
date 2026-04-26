@@ -78,6 +78,12 @@ procedure display_next_page;
       call open_main_window; \
    end
 
+#define GVAR_MSG_IN_DDRAW     (0x2000)
+#define MVAR_MSG_IN_DDRAW     (0x2001)
+#define mstr_pro_item(x)      message_str_game(GAME_MSG_PRO_ITEM, x)
+#define mstr_gvar(x)          message_str_game(GVAR_MSG_IN_DDRAW, x)
+#define mstr_mvar(x)          message_str_game(MVAR_MSG_IN_DDRAW, x)
+
 //# Constants #////////////////////////////////////////////////////////////////////////////////////////
 
 #define C_WN_Open "gldbg_w_open"
