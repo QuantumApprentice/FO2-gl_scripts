@@ -1,0 +1,14 @@
+// Just some useful scripts I'm storing in a place
+// where I can remember later
+
+//returns the date as a string in y:d:h:m:s format
+procedure get_time_from_ticks(variable ticks) begin
+
+   variable years := ticks/(GAME_TIME_SUBSECOND_RESOLUTION * SECONDS_PER_MINUTE * MINUTES_PER_HOUR * HOURS_PER_DAY * DAYS_PER_YEAR);
+   variable days  := ticks/(GAME_TIME_SUBSECOND_RESOLUTION * SECONDS_PER_MINUTE * MINUTES_PER_HOUR * HOURS_PER_DAY) % DAYS_PER_YEAR;
+   variable hours := ticks/(GAME_TIME_SUBSECOND_RESOLUTION * SECONDS_PER_MINUTE * MINUTES_PER_HOUR) % HOURS_PER_DAY;
+   variable mins  := ticks/(GAME_TIME_SUBSECOND_RESOLUTION * SECONDS_PER_MINUTE) % MINUTES_PER_HOUR;
+   variable secs  := ticks/ GAME_TIME_SUBSECOND_RESOLUTION % SECONDS_PER_MINUTE;
+
+   debug_msg("date: "+years+"y "+days+"d "+hours+"h "+mins+"m "+secs+"s");
+end
