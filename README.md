@@ -18,7 +18,10 @@ gvar.msg and mvar.msg, both of which will need to be created in
 > FO2/data/text/english/game/<br>
 (possibly substitute your language if sfall supports it)
 
-Add this line to ddraw.ini (not sure what version):
+If you have sfall v4.1.9 or greater<br>
+you don't have to add lines to ddraw.ini.<br>
+If you have sfall v3.7b or greater<br>
+Add this line to ddraw.ini:
 > ExtraGameMsgFileList=gvar,mvar
 
 and create gvar.msg with this format:<br>
@@ -43,7 +46,8 @@ and mvar.msg with this format:<br>
 
 This is because this script uses sfall's message_str_game() function<br>
 link here: https://sfall.bgforge.net/other/#message_str_game<br>
-but in case that doesn't work, here's the text:
+and  here: sfall-team.github.io/sfall/other/#message_str_game<br>
+but in case the link doesn't work, here's the text:
 
 >message_str_game
 
@@ -53,5 +57,23 @@ but in case that doesn't work, here's the text:
 
 >    Additional game msg files added by ExtraGameMsgFileList setting will have consecutive fileIds assigned beginning from 0x2000 to 0x2FFF. (e.g. if you set ExtraGameMsgFileList=foo,bar in ddraw.ini, foo.msg will be associated with 0x2000 and bar.msg with 0x2001.).
 >    If a file has a specific number assigned in ExtraGameMsgFileList, its fileId will be (0x2000 + assigned number). (e.g. with ExtraGameMsgFileList=foo,bar:2,foobar in ddraw.ini, bar.msg will be associated with 0x2002 and foobar.msg with 0x2003.)
+
+If you're using sfall v4.1.9 or higher, add_extra_msg_file() doesn't require entries in ddraw.ini, and will directly add links to the related .msg files without any extra steps.<br>
+link here: https://sfall.bgforge.net/sfall-funcx-macros/#add_extra_msg_file<br>
+and  here: https://sfall-team.github.io/sfall/sfall-funcx-macros/#add_extra_msg_file<br>
+and the text:
+
+>add_extra_msg_file (sfall.h)
+
+>int add_extra_msg_file(string fileName)
+
+> Loads a custom message file and returns the file ID number assigned to it, in the range of 0x3000 to 0x3FFF, for use with the message_str_game function.
+
+>    fileName: the name of the custom message file (including the .msg extension) in text\<language>\game\ directory.
+>    NOTE: if the msg file does not exist in the current language directory, the function will try to load it from the text\English\game\ directory.
+
+> Alternative form: int add_extra_msg_file(string fileName, int fileNumber) [DEPRECATED]
+
+>    Deprecation notice: Starting from sfall 4.4.10/3.8.50, the two-argument form is deprecated. The fileNumber argument is ignored, and the function behaves the same as the one-argument form.
 
 
