@@ -46,7 +46,7 @@ and mvar.msg with this format:<br>
 
 This is because this script uses sfall's message_str_game() function<br>
 link here: https://sfall.bgforge.net/other/#message_str_game<br>
-and  here: sfall-team.github.io/sfall/other/#message_str_game<br>
+and  here: https://sfall-team.github.io/sfall/other/#message_str_game<br>
 but in case the link doesn't work, here's the text:
 
 >message_str_game
