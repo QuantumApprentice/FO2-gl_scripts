@@ -140,11 +140,11 @@ begin
 
    // calling sfall_ver_ functions will crash game if sfall version is too old
    // 3.7b is the point when these functions start working according to NovaRain
-   if not (metarule_exist("message_str_game")) then begin
-      //TODO: replace this with an in-game popup warning
-      debug_msg("gl_visual_vars.ssl ERROR - sfall version too old. Required: v3.7.2");
-      return;     //early return to prevent crash
-   end
+   // but metarule_exist() appears to just crash the script on older versions,
+   // so the game doesn't crash but nothing works correctly 
+   // (at least the menu buttons do show up)
+   debug_msg("metarule_exist: " + metarule_exist("add_extra_msg_file"));
+
    // add_extra_msg_file() only compatible with sfall v4.1.9 or higher
    if (min_sfall_version(4,1,9)) then begin
       gvar_msg := add_extra_msg_file("gvar.msg");
