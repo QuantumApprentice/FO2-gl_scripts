@@ -21,7 +21,7 @@ If you have sfall v4.1.9 or greater<br>
 you don't have to add lines to ddraw.ini.<br>
 If you have sfall v3.7b but less than v4.1.9<br>
 Add this line to ddraw.ini:
-> ExtraGameMsgFileList=gvar,mvar
+> ExtraGameMsgFileList=gvar,mvar<br>
 This represents gvar.msg and mvar.msg, both of which will need to be created in
 > FO2/data/text/english/game/<br>
 (possibly substitute your language if sfall supports it)
