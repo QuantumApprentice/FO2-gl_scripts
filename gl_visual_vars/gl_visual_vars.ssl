@@ -190,13 +190,33 @@ begin
    call display_main_window;
 end
 
+procedure check_pcx_exist(variable path) begin
+   //using fs_copy() here because 
+   // 1) fs_file() appears to only search files that are already loaded in by sfall
+   // 2) art_frame_data() causes the engine to crash if sfall version is too old
+   // 3) fs_file() and fs_copy() exist all the way back in sfall v2.something
+   // 4) fs_copy() returns an index into an array if file is already loaded, so it should only load the file once
+   // variable pcx := art_frame_data(path, 0, 0);
+   variable pcx := fs_copy(path, path);
+   // display_msg("pcx: " + pcx);
+   if (pcx == -1) then return false;   // file not found
+
+   return true;
+end
+
 procedure open_main_window
 begin
    reg_anim_clear(dude_obj);
    GUI_Delete_Window(C_WN_Open)
    stop_game;
    game_ui_disable;
-   GUI_Set_Cursor("pcx\\cursor.pcx")
+
+   if (check_pcx_exist("pcx\\cursor.pcx")) then begin
+      GUI_Set_Cursor("pcx\\cursor.pcx")
+   end else begin
+      display_msg("File Missing: pcx\\cursor.pcx. Please copy PCX folder to FO2\\data\\");
+   end
+
    call create_main_window;
 end
 
