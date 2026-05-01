@@ -13,18 +13,22 @@ Known bugs:
 > Traits can't be changed  
 > Skills can't be decreased
 
-This script requires a define in ddraw.ini for files representing
-gvar.msg and mvar.msg, both of which will need to be created in
-> FO2/data/text/english/game/<br>
-(possibly substitute your language if sfall supports it)
+### Install
+Copy pcx\ folder into FO2\data\ folder so it looks like FO2\data\pcx\<br>
+Compile gl_visual_vars.ssl and copy resulting gl_visual_vars.int file into FO2\data\scripts<br>
 
 If you have sfall v4.1.9 or greater<br>
 you don't have to add lines to ddraw.ini.<br>
-If you have sfall v3.7b or greater<br>
+If you have sfall v3.7b but less than v4.1.9<br>
 Add this line to ddraw.ini:
 > ExtraGameMsgFileList=gvar,mvar
-
+This represents gvar.msg and mvar.msg, both of which will need to be created in
+> FO2/data/text/english/game/<br>
+(possibly substitute your language if sfall supports it)
+<br>
+<br>
 and create gvar.msg with this format:<br>
+
 ```
 {0}{}{GVAR_PLAYER_REPUTATION}
 {1}{}{GVAR_CHILDKILLER_REPUTATION}
