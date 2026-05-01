@@ -15,7 +15,7 @@ Known bugs:
 
 ### Install
 Copy pcx\ folder into FO2\data\ folder so it looks like "FO2\data\pcx\" <br>
-Compile gl_visual_vars.ssl and copy resulting gl_visual_vars.int file into FO2\data\scripts<br>
+Compile gl_visual_vars.ssl and copy resulting gl_visual_vars.int file into "FO2\data\scripts\"<br>
 
 If you have sfall v4.1.9 or greater<br>
 you don't have to add lines to ddraw.ini.<br>
